@@ -1,0 +1,625 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry"><rect><x>0</x><y>0</y><width>1200</width><height>800</height></rect></property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout"><property name="margin"><number>0</number></property>
+    <item>
+     <widget class="QStackedWidget" name="stackedWidget">
+
+      <!-- ══════════════════════════════════════════════════
+           PAGE 0 — LANDING
+      ══════════════════════════════════════════════════ -->
+      <widget class="QWidget" name="pageLanding">
+       <layout class="QVBoxLayout">
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+        <item>
+         <layout class="QVBoxLayout">
+          <item><widget class="QLabel" name="lblAppTitle"><property name="text"><string>📚 Let's Study Smart</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+          <item><widget class="QLabel" name="lblAppSub"><property name="text"><string>Your collaborative study group platform</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+         </layout>
+        </item>
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>30</height></size></property></spacer></item>
+        <item>
+         <widget class="QLabel"><property name="text"><string>Are you a student?</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="styleSheet"><string>font-size:18px;color:#94a3b8;</string></property></widget>
+        </item>
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></item>
+        <item>
+         <layout class="QHBoxLayout">
+          <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+          <item><widget class="QPushButton" name="btnIsStudent"><property name="text"><string>✅ Yes, I'm a Student</string></property></widget></item>
+          <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property><property name="sizeHint" stdset="0"><size><width>40</width><height>20</height></size></property></spacer></item>
+          <item><widget class="QPushButton" name="btnIsAdmin"><property name="text"><string>🔑 No, I'm Admin</string></property></widget></item>
+          <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+         </layout>
+        </item>
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+       </layout>
+      </widget>
+
+      <!-- ══════════════════════════════════════════════════
+           PAGE 1 — ADMIN LOGIN
+      ══════════════════════════════════════════════════ -->
+      <widget class="QWidget" name="pageAdminLogin">
+       <layout class="QVBoxLayout">
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+        <item>
+         <layout class="QHBoxLayout">
+          <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+          <item>
+           <widget class="QFrame" name="frameAdminLogin">
+            <property name="minimumSize"><size><width>580</width><height>410</height></size></property>
+            <layout class="QVBoxLayout"><property name="margin"><number>40</number></property><property name="spacing"><number>12</number></property>
+             <item><widget class="QLabel"><property name="text"><string>🔑 Admin Login</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="styleSheet"><string>font-size:18px;font-weight:bold;color:#a78bfa;</string></property></widget></item>
+             <item><widget class="QLabel"><property name="text"><string>Username</string></property></widget></item>
+             <item><widget class="QLineEdit" name="txtAdminUsername"><property name="placeholderText"><string>Admin username</string></property></widget></item>
+             <item><widget class="QLabel"><property name="text"><string>Password</string></property></widget></item>
+             <item><widget class="QLineEdit" name="txtAdminPassword"><property name="placeholderText"><string>Admin password</string></property><property name="echoMode"><enum>QLineEdit::Password</enum></property></widget></item>
+             <item><widget class="QLabel" name="lblCaptchaAdmin"><property name="text"><string>🔐 CAPTCHA: ----</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+             <item><widget class="QLineEdit" name="txtAdminCaptcha"><property name="placeholderText"><string>Enter 4-digit CAPTCHA</string></property></widget></item>
+             <item><widget class="QPushButton" name="btnAdminLogin"><property name="text"><string>Login as Admin</string></property></widget></item>
+             <item><widget class="QPushButton" name="btnBackFromAdminLogin"><property name="text"><string>← Back</string></property></widget></item>
+            </layout>
+           </widget>
+          </item>
+          <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+         </layout>
+        </item>
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+       </layout>
+      </widget>
+
+      <!-- ══════════════════════════════════════════════════
+           PAGE 2 — STUDENT CHOICE
+      ══════════════════════════════════════════════════ -->
+      <widget class="QWidget" name="pageStudentChoice">
+       <layout class="QVBoxLayout">
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+        <item>
+         <layout class="QHBoxLayout">
+          <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+          <item>
+           <widget class="QFrame" name="frameChoice">
+            <property name="minimumSize"><size><width>560</width><height>280</height></size></property>
+            <layout class="QVBoxLayout"><property name="margin"><number>36</number></property><property name="spacing"><number>16</number></property>
+             <item><widget class="QLabel"><property name="text"><string>👋 Welcome, Student!</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="styleSheet"><string>font-size:18px;font-weight:bold;color:#60a5fa;</string></property></widget></item>
+             <item><widget class="QLabel"><property name="text"><string>What would you like to do?</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="styleSheet"><string>color:#94a3b8;font-size:14px;</string></property></widget></item>
+             <item><widget class="QPushButton" name="btnGoToApply"><property name="text"><string>📝 Apply / Register</string></property></widget></item>
+             <item><widget class="QPushButton" name="btnGoToStudentLogin"><property name="text"><string>🔓 Student Login</string></property></widget></item>
+             <item><widget class="QPushButton" name="btnBackFromChoice"><property name="text"><string>← Back</string></property></widget></item>
+            </layout>
+           </widget>
+          </item>
+          <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+         </layout>
+        </item>
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+       </layout>
+      </widget>
+
+      <!-- ══════════════════════════════════════════════════
+           PAGE 3 — STUDENT APPLY
+      ══════════════════════════════════════════════════ -->
+      <widget class="QWidget" name="pageApply">
+       <layout class="QVBoxLayout">
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></item>
+        <item>
+         <layout class="QHBoxLayout">
+          <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+          <item>
+           <widget class="QFrame" name="frameApply">
+            <property name="minimumSize"><size><width>580</width><height>520</height></size></property>
+            <layout class="QVBoxLayout"><property name="margin"><number>28</number></property><property name="spacing"><number>10</number></property>
+             <item><widget class="QLabel"><property name="text"><string>📝 Student Application</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="styleSheet"><string>font-size:16px;font-weight:bold;color:#60a5fa;</string></property></widget></item>
+             <item><widget class="QLabel"><property name="text"><string>⚠ Your username and password will be shown after submission.</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="styleSheet"><string>color:#fbbf24;font-size:11px;</string></property></widget></item>
+             <item><widget class="QLineEdit" name="txtApplyId"><property name="placeholderText"><string>Student ID (10 digits, e.g. 2421535042) *</string></property></widget></item>
+             <item><widget class="QLineEdit" name="txtApplyName"><property name="placeholderText"><string>Full Name (e.g. David Smith) *</string></property></widget></item>
+             <item><widget class="QLineEdit" name="txtApplyDept"><property name="placeholderText"><string>Department (e.g. CSE) *</string></property></widget></item>
+             <item><widget class="QLineEdit" name="txtApplySem"><property name="placeholderText"><string>Semester (e.g. 5th) *</string></property></widget></item>
+             <item><widget class="QLineEdit" name="txtApplyEmail"><property name="placeholderText"><string>Email (e.g. david.smith.242@northsouth.edu) *</string></property></widget></item>
+             <item><widget class="QLineEdit" name="txtApplyCGPA"><property name="placeholderText"><string>Current CGPA (e.g. 3.75)</string></property></widget></item>
+             <item><widget class="QPushButton" name="btnStudentApply"><property name="text"><string>✅ Submit Application</string></property></widget></item>
+             <item><widget class="QPushButton" name="btnBackFromApply"><property name="text"><string>← Back</string></property></widget></item>
+            </layout>
+           </widget>
+          </item>
+          <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+         </layout>
+        </item>
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property><property name="sizeHint" stdset="0"><size><width>20</width><height>20</height></size></property></spacer></item>
+       </layout>
+      </widget>
+
+      <!-- ══════════════════════════════════════════════════
+           PAGE 4 — STUDENT LOGIN
+      ══════════════════════════════════════════════════ -->
+      <widget class="QWidget" name="pageStudentLogin">
+       <layout class="QVBoxLayout">
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+        <item>
+         <layout class="QHBoxLayout">
+          <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+          <item>
+           <widget class="QFrame" name="frameStudentLogin">
+            <property name="minimumSize"><size><width>580</width><height>410</height></size></property>
+            <layout class="QVBoxLayout"><property name="margin"><number>40</number></property><property name="spacing"><number>12</number></property>
+             <item><widget class="QLabel"><property name="text"><string>🎓 Student Login</string></property><property name="alignment"><set>Qt::AlignCenter</set></property><property name="styleSheet"><string>font-size:18px;font-weight:bold;color:#60a5fa;</string></property></widget></item>
+             <item><widget class="QLabel"><property name="text"><string>Username</string></property></widget></item>
+             <item><widget class="QLineEdit" name="txtStudentUsername"><property name="placeholderText"><string>Your username</string></property></widget></item>
+             <item><widget class="QLabel"><property name="text"><string>Password</string></property></widget></item>
+             <item><widget class="QLineEdit" name="txtStudentPassword"><property name="placeholderText"><string>Your password</string></property><property name="echoMode"><enum>QLineEdit::Password</enum></property></widget></item>
+             <item><widget class="QLabel" name="lblCaptchaStudent"><property name="text"><string>🔐 CAPTCHA: ----</string></property><property name="alignment"><set>Qt::AlignCenter</set></property></widget></item>
+             <item><widget class="QLineEdit" name="txtStudentCaptcha"><property name="placeholderText"><string>Enter 4-digit CAPTCHA</string></property></widget></item>
+             <item><widget class="QPushButton" name="btnStudentLogin"><property name="text"><string>Login</string></property></widget></item>
+             <item><widget class="QPushButton" name="btnBackFromStudentLogin"><property name="text"><string>← Back</string></property></widget></item>
+            </layout>
+           </widget>
+          </item>
+          <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+         </layout>
+        </item>
+        <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+       </layout>
+      </widget>
+
+      <!-- ══════════════════════════════════════════════════
+           PAGE 5 — ADMIN DASHBOARD
+      ══════════════════════════════════════════════════ -->
+      <widget class="QWidget" name="pageAdminDash">
+       <layout class="QVBoxLayout"><property name="margin"><number>12</number></property>
+        <item>
+         <layout class="QHBoxLayout">
+          <item><widget class="QLabel" name="lblAdminWelcome"><property name="text"><string>👋 Welcome, Admin</string></property><property name="styleSheet"><string>font-size:15px;font-weight:bold;color:#60a5fa;</string></property></widget></item>
+          <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+          <item><widget class="QPushButton" name="btnAdminLogout"><property name="text"><string>Logout</string></property><property name="maximumSize"><size><width>100</width><height>32</height></size></property></widget></item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="tabAdmin">
+
+          <!-- TAB: Register Student -->
+          <widget class="QWidget" name="tabAdminRegister"><attribute name="title"><string>➕ Register Student</string></attribute>
+           <layout class="QVBoxLayout"><property name="margin"><number>14</number></property>
+            <item>
+             <layout class="QGridLayout">
+              <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Student ID *</string></property></widget></item>
+              <item row="0" column="1"><widget class="QLineEdit" name="txtRegSid"><property name="placeholderText"><string>e.g. 2421535042</string></property></widget></item>
+              <item row="1" column="0"><widget class="QLabel"><property name="text"><string>Full Name *</string></property></widget></item>
+              <item row="1" column="1"><widget class="QLineEdit" name="txtRegName"><property name="placeholderText"><string>e.g. David Smith</string></property></widget></item>
+              <item row="2" column="0"><widget class="QLabel"><property name="text"><string>Department *</string></property></widget></item>
+              <item row="2" column="1"><widget class="QLineEdit" name="txtRegDept"><property name="placeholderText"><string>e.g. CSE</string></property></widget></item>
+              <item row="3" column="0"><widget class="QLabel"><property name="text"><string>Semester *</string></property></widget></item>
+              <item row="3" column="1"><widget class="QLineEdit" name="txtRegSem"><property name="placeholderText"><string>e.g. 5th</string></property></widget></item>
+              <item row="4" column="0"><widget class="QLabel"><property name="text"><string>Email *</string></property></widget></item>
+              <item row="4" column="1"><widget class="QLineEdit" name="txtRegEmail"><property name="placeholderText"><string>e.g. david.smith.242@northsouth.edu</string></property></widget></item>
+              <item row="5" column="0"><widget class="QLabel"><property name="text"><string>Phone</string></property></widget></item>
+              <item row="5" column="1"><widget class="QLineEdit" name="txtRegPhone"><property name="placeholderText"><string>01XXXXXXXXX</string></property></widget></item>
+              <item row="6" column="0"><widget class="QLabel"><property name="text"><string>CGPA</string></property></widget></item>
+              <item row="6" column="1"><widget class="QLineEdit" name="txtRegCGPA"><property name="placeholderText"><string>e.g. 3.75</string></property></widget></item>
+             </layout>
+            </item>
+            <item><widget class="QPushButton" name="btnAdminRegisterStudent"><property name="text"><string>✅ Register Student</string></property></widget></item>
+            <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+           </layout>
+          </widget>
+
+          <!-- TAB: Manage Students -->
+          <widget class="QWidget" name="tabAdminStudents"><attribute name="title"><string>👤 Students</string></attribute>
+           <layout class="QVBoxLayout"><property name="margin"><number>10</number></property>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QLineEdit" name="txtAdminSearch"><property name="placeholderText"><string>Search by name / username / ID</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminSearchStudent"><property name="text"><string>🔍 Search</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminViewStudents"><property name="text"><string>View All</string></property></widget></item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QLineEdit" name="txtAdminStudentId"><property name="placeholderText"><string>Student ID for actions below</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminDeleteStudent"><property name="text"><string>🗑 Delete</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminBlockStudent"><property name="text"><string>🚫 Block</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminUnblockStudent"><property name="text"><string>✅ Unblock</string></property></widget></item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QPushButton" name="btnAdminSortName"><property name="text"><string>Sort Name</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminSortId"><property name="text"><string>Sort ID</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminSortCGPA"><property name="text"><string>Sort CGPA</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminReverseList"><property name="text"><string>↕ Reverse</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminRemoveDuplicates"><property name="text"><string>Remove Dups</string></property></widget></item>
+             </layout>
+            </item>
+            <item><widget class="QListWidget" name="listAdminStudents"/></item>
+           </layout>
+          </widget>
+
+          <!-- TAB: Update Student (admin only) -->
+          <widget class="QWidget" name="tabAdminUpdateStudent"><attribute name="title"><string>✏ Update Student</string></attribute>
+           <layout class="QVBoxLayout"><property name="margin"><number>14</number></property>
+            <item>
+             <layout class="QGridLayout">
+              <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Current Student ID *</string></property></widget></item>
+              <item row="0" column="1"><widget class="QLineEdit" name="txtAdminUpdateSid"><property name="placeholderText"><string>Current student ID to update</string></property></widget></item>
+              <item row="1" column="0"><widget class="QLabel"><property name="text"><string>Full Name *</string></property></widget></item>
+              <item row="1" column="1"><widget class="QLineEdit" name="txtAdminUpdateName"><property name="placeholderText"><string>New full name</string></property></widget></item>
+              <item row="2" column="0"><widget class="QLabel"><property name="text"><string>New Student ID *</string></property></widget></item>
+              <item row="2" column="1"><widget class="QLineEdit" name="txtAdminUpdateNewSid"><property name="placeholderText"><string>New student ID</string></property></widget></item>
+              <item row="3" column="0"><widget class="QLabel"><property name="text"><string>Username *</string></property></widget></item>
+              <item row="3" column="1"><widget class="QLineEdit" name="txtAdminUpdateUn"><property name="placeholderText"><string>New username</string></property></widget></item>
+              <item row="4" column="0"><widget class="QLabel"><property name="text"><string>Email *</string></property></widget></item>
+              <item row="4" column="1"><widget class="QLineEdit" name="txtAdminUpdateEmail"><property name="placeholderText"><string>New email</string></property></widget></item>
+              <item row="5" column="0"><widget class="QLabel"><property name="text"><string>Department</string></property></widget></item>
+              <item row="5" column="1"><widget class="QLineEdit" name="txtAdminUpdateDept"><property name="placeholderText"><string>Department</string></property></widget></item>
+              <item row="6" column="0"><widget class="QLabel"><property name="text"><string>Semester</string></property></widget></item>
+              <item row="6" column="1"><widget class="QLineEdit" name="txtAdminUpdateSem"><property name="placeholderText"><string>Semester</string></property></widget></item>
+              <item row="7" column="0"><widget class="QLabel"><property name="text"><string>Phone</string></property></widget></item>
+              <item row="7" column="1"><widget class="QLineEdit" name="txtAdminUpdatePhone"><property name="placeholderText"><string>Phone</string></property></widget></item>
+              <item row="8" column="0"><widget class="QLabel"><property name="text"><string>CGPA</string></property></widget></item>
+              <item row="8" column="1"><widget class="QLineEdit" name="txtAdminUpdateCGPA"><property name="placeholderText"><string>CGPA</string></property></widget></item>
+             </layout>
+            </item>
+            <item><widget class="QPushButton" name="btnAdminUpdateStudent"><property name="text"><string>💾 Save Changes</string></property></widget></item>
+            <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+           </layout>
+          </widget>
+
+          <!-- TAB: Groups -->
+          <widget class="QWidget" name="tabAdminGroups"><attribute name="title"><string>👥 Groups</string></attribute>
+           <layout class="QVBoxLayout"><property name="margin"><number>10</number></property>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QPushButton" name="btnAdminViewGroups"><property name="text"><string>View All Groups</string></property></widget></item>
+              <item><widget class="QLineEdit" name="txtAdminGroupId"><property name="placeholderText"><string>Group ID</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminDeleteGroup"><property name="text"><string>🗑 Delete</string></property></widget></item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QLabel"><property name="text"><string>Merge:</string></property></widget></item>
+              <item><widget class="QLineEdit" name="txtMergeGroup1"><property name="placeholderText"><string>Keep Group ID</string></property></widget></item>
+              <item><widget class="QLineEdit" name="txtMergeGroup2"><property name="placeholderText"><string>Merge-from Group ID</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminMergeGroups"><property name="text"><string>⚡ Merge</string></property></widget></item>
+             </layout>
+            </item>
+            <item><widget class="QListWidget" name="listAdminGroups"/></item>
+           </layout>
+          </widget>
+
+          <!-- TAB: Events (Admin) -->
+          <widget class="QWidget" name="tabAdminEvents"><attribute name="title"><string>📅 Events</string></attribute>
+           <layout class="QVBoxLayout"><property name="margin"><number>10</number></property>
+            <item>
+             <layout name="hAdminEventBtns" class="QHBoxLayout">
+              <item><widget class="QPushButton" name="btnAdminViewPending"><property name="text"><string>🕐 Pending Requests</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminViewAllEvents"><property name="text"><string>View All Events</string></property></widget></item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QLabel"><property name="text"><string>Event ID:</string></property></widget></item>
+              <item><widget class="QLineEdit" name="txtAdminEventId"><property name="placeholderText"><string>Event ID</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminApproveEvent"><property name="text"><string>✅ Approve</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminDeleteEvent"><property name="text"><string>🗑 Delete</string></property></widget></item>
+             </layout>
+            </item>
+            <item><widget class="QListWidget" name="listAdminEvents"/></item>
+           </layout>
+          </widget>
+
+          <!-- TAB: Admin Task Management -->
+          <widget class="QWidget" name="tabAdminTasks"><attribute name="title"><string>📋 Tasks</string></attribute>
+           <layout class="QVBoxLayout"><property name="margin"><number>10</number></property>
+            <item>
+             <widget class="QGroupBox"><property name="title"><string>Assign Task (Admin)</string></property>
+              <layout class="QGridLayout">
+               <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Group ID</string></property></widget></item>
+               <item row="0" column="1"><widget class="QLineEdit" name="txtAdminTaskGroupId"><property name="placeholderText"><string>e.g. SG001</string></property></widget></item>
+               <item row="1" column="0"><widget class="QLabel"><property name="text"><string>Task Title</string></property></widget></item>
+               <item row="1" column="1"><widget class="QLineEdit" name="txtAdminTaskTitle"><property name="placeholderText"><string>Task title</string></property></widget></item>
+               <item row="2" column="0"><widget class="QLabel"><property name="text"><string>Deadline</string></property></widget></item>
+               <item row="2" column="1"><widget class="QLineEdit" name="txtAdminTaskDeadline"><property name="placeholderText"><string>yyyy-MM-dd</string></property></widget></item>
+               <item row="3" column="0"><widget class="QLabel"><property name="text"><string>Assign to (Student ID)</string></property></widget></item>
+               <item row="3" column="1"><widget class="QLineEdit" name="txtAdminTaskMemberId"><property name="placeholderText"><string>Student ID</string></property></widget></item>
+               <item row="4" column="0"><widget class="QLabel"><property name="text"><string>Notes</string></property></widget></item>
+               <item row="4" column="1"><widget class="QLineEdit" name="txtAdminTaskNotes"><property name="placeholderText"><string>Optional notes</string></property></widget></item>
+              </layout>
+             </widget>
+            </item>
+            <item><widget class="QPushButton" name="btnAdminCreateTask"><property name="text"><string>➕ Assign Task</string></property></widget></item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QLabel"><property name="text"><string>Task ID:</string></property></widget></item>
+              <item><widget class="QLineEdit" name="txtAdminTaskId"><property name="placeholderText"><string>Task ID</string></property></widget></item>
+              <item><widget class="QLabel"><property name="text"><string>Progress %:</string></property></widget></item>
+              <item><widget class="QSpinBox" name="spnAdminProgress"><property name="maximum"><number>100</number></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminUpdateTaskProgress"><property name="text"><string>Update</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminMarkTaskDone"><property name="text"><string>✅ Done</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminDeleteTask"><property name="text"><string>🗑 Delete</string></property></widget></item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QLineEdit" name="txtAdminTaskViewGroupId"><property name="placeholderText"><string>Group ID to filter tasks</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminViewGroupTasks"><property name="text"><string>Group Tasks</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminViewAllTasks"><property name="text"><string>All Tasks</string></property></widget></item>
+             </layout>
+            </item>
+            <item><widget class="QListWidget" name="listAdminTasks"/></item>
+           </layout>
+          </widget>
+
+          <!-- TAB: Admin Create Group -->
+          <widget class="QWidget" name="tabAdminCreateGroup"><attribute name="title"><string>➕ Create Group</string></attribute>
+           <layout class="QVBoxLayout"><property name="margin"><number>14</number></property>
+            <item>
+             <layout class="QGridLayout">
+              <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Group Name *</string></property></widget></item>
+              <item row="0" column="1"><widget class="QLineEdit" name="txtAdminGroupName"><property name="placeholderText"><string>e.g. AI Study Group</string></property></widget></item>
+              <item row="1" column="0"><widget class="QLabel"><property name="text"><string>Course Name *</string></property></widget></item>
+              <item row="1" column="1"><widget class="QLineEdit" name="txtAdminCourseName"><property name="placeholderText"><string>e.g. Artificial Intelligence</string></property></widget></item>
+              <item row="2" column="0"><widget class="QLabel"><property name="text"><string>Course Code</string></property></widget></item>
+              <item row="2" column="1"><widget class="QLineEdit" name="txtAdminCourseCode"><property name="placeholderText"><string>e.g. CSE440</string></property></widget></item>
+              <item row="3" column="0"><widget class="QLabel"><property name="text"><string>Description</string></property></widget></item>
+              <item row="3" column="1"><widget class="QLineEdit" name="txtAdminGroupDesc"><property name="placeholderText"><string>Short description</string></property></widget></item>
+              <item row="4" column="0"><widget class="QLabel"><property name="text"><string>Max Members</string></property></widget></item>
+              <item row="4" column="1"><widget class="QSpinBox" name="spnAdminMaxMembers"><property name="minimum"><number>2</number></property><property name="maximum"><number>100</number></property><property name="value"><number>20</number></property></widget></item>
+              <item row="5" column="0"><widget class="QLabel"><property name="text"><string>Privacy</string></property></widget></item>
+              <item row="5" column="1"><widget class="QComboBox" name="cmbAdminPrivacy"><item><property name="text"><string>Public</string></property></item><item><property name="text"><string>Private</string></property></item></widget></item>
+             </layout>
+            </item>
+            <item><widget class="QPushButton" name="btnAdminCreateGroup"><property name="text"><string>✅ Create Group</string></property></widget></item>
+            <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+           </layout>
+          </widget>
+
+          <!-- TAB: Admin Credentials -->
+          <widget class="QWidget" name="tabAdminCredentials"><attribute name="title"><string>🔑 My Credentials</string></attribute>
+           <layout class="QVBoxLayout"><property name="margin"><number>14</number></property>
+            <item>
+             <layout class="QGridLayout">
+              <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Current Password *</string></property></widget></item>
+              <item row="0" column="1"><widget class="QLineEdit" name="txtAdminCurPw"><property name="echoMode"><enum>QLineEdit::Password</enum></property><property name="placeholderText"><string>Current password</string></property></widget></item>
+              <item row="1" column="0"><widget class="QLabel"><property name="text"><string>New Username *</string></property></widget></item>
+              <item row="1" column="1"><widget class="QLineEdit" name="txtAdminNewUn"><property name="placeholderText"><string>New username</string></property></widget></item>
+              <item row="2" column="0"><widget class="QLabel"><property name="text"><string>New Password *</string></property></widget></item>
+              <item row="2" column="1"><widget class="QLineEdit" name="txtAdminNewPw"><property name="echoMode"><enum>QLineEdit::Password</enum></property><property name="placeholderText"><string>New password</string></property></widget></item>
+             </layout>
+            </item>
+            <item><widget class="QPushButton" name="btnAdminChangeCredentials"><property name="text"><string>💾 Update Credentials</string></property></widget></item>
+            <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+           </layout>
+          </widget>
+
+          <!-- TAB: System -->
+          <widget class="QWidget" name="tabAdminSystem"><attribute name="title"><string>⚙ System</string></attribute>
+           <layout class="QVBoxLayout"><property name="margin"><number>14</number></property>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QPushButton" name="btnAdminStats"><property name="text"><string>📊 Statistics</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminExportReport"><property name="text"><string>📄 Export Report</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminBackup"><property name="text"><string>💾 Backup</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnAdminRestore"><property name="text"><string>🔄 Restore</string></property></widget></item>
+             </layout>
+            </item>
+            <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+           </layout>
+          </widget>
+
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+      <!-- ══════════════════════════════════════════════════
+           PAGE 6 — STUDENT DASHBOARD
+      ══════════════════════════════════════════════════ -->
+      <widget class="QWidget" name="pageStudentDash">
+       <layout class="QVBoxLayout"><property name="margin"><number>12</number></property>
+        <item>
+         <layout class="QHBoxLayout">
+          <item><widget class="QLabel" name="lblStudentWelcome"><property name="text"><string>👋 Welcome</string></property><property name="styleSheet"><string>font-size:14px;font-weight:bold;color:#60a5fa;</string></property></widget></item>
+          <item><spacer><property name="orientation"><enum>Qt::Horizontal</enum></property></spacer></item>
+          <item><widget class="QPushButton" name="btnStudentLogout"><property name="text"><string>Logout</string></property><property name="maximumSize"><size><width>100</width><height>32</height></size></property></widget></item>
+         </layout>
+        </item>
+        <item>
+         <widget class="QTabWidget" name="tabStudent">
+
+          <!-- Profile -->
+          <widget class="QWidget" name="tabProfile"><attribute name="title"><string>👤 Profile</string></attribute>
+           <layout class="QVBoxLayout"><property name="margin"><number>12</number></property>
+            <item><widget class="QPushButton" name="btnViewProfile"><property name="text"><string>👁 View My Full Profile</string></property></widget></item>
+            <item>
+             <widget class="QGroupBox"><property name="title"><string>Edit Profile (Department / Semester / Phone / CGPA only)</string></property>
+              <layout class="QGridLayout">
+               <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Department</string></property></widget></item>
+               <item row="0" column="1"><widget class="QLineEdit" name="txtStudEditDept"><property name="placeholderText"><string>e.g. CSE</string></property></widget></item>
+               <item row="1" column="0"><widget class="QLabel"><property name="text"><string>Semester</string></property></widget></item>
+               <item row="1" column="1"><widget class="QLineEdit" name="txtStudEditSem"><property name="placeholderText"><string>e.g. 6th</string></property></widget></item>
+               <item row="2" column="0"><widget class="QLabel"><property name="text"><string>Phone</string></property></widget></item>
+               <item row="2" column="1"><widget class="QLineEdit" name="txtStudEditPhone"><property name="placeholderText"><string>01XXXXXXXXX</string></property></widget></item>
+               <item row="3" column="0"><widget class="QLabel"><property name="text"><string>CGPA</string></property></widget></item>
+               <item row="3" column="1"><widget class="QLineEdit" name="txtStudEditCGPA"><property name="placeholderText"><string>e.g. 3.80</string></property></widget></item>
+              </layout>
+             </widget>
+            </item>
+            <item><widget class="QPushButton" name="btnStudentSaveProfile"><property name="text"><string>💾 Save Profile</string></property></widget></item>
+            <item>
+             <widget class="QGroupBox"><property name="title"><string>Change Password</string></property>
+              <layout class="QHBoxLayout">
+               <item><widget class="QLineEdit" name="txtStudOldPw"><property name="placeholderText"><string>Current password</string></property><property name="echoMode"><enum>QLineEdit::Password</enum></property></widget></item>
+               <item><widget class="QLineEdit" name="txtStudNewPw"><property name="placeholderText"><string>New password</string></property><property name="echoMode"><enum>QLineEdit::Password</enum></property></widget></item>
+               <item><widget class="QPushButton" name="btnStudentChangePassword"><property name="text"><string>🔑 Change</string></property></widget></item>
+              </layout>
+             </widget>
+            </item>
+            <item><spacer><property name="orientation"><enum>Qt::Vertical</enum></property></spacer></item>
+           </layout>
+          </widget>
+
+          <!-- Groups -->
+          <widget class="QWidget" name="tabStudentGroups"><attribute name="title"><string>👥 Groups</string></attribute>
+           <layout class="QVBoxLayout"><property name="margin"><number>10</number></property>
+            <item>
+             <widget class="QGroupBox"><property name="title"><string>Create Group</string></property>
+              <layout class="QGridLayout">
+               <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Group Name</string></property></widget></item>
+               <item row="0" column="1"><widget class="QLineEdit" name="txtGroupName"><property name="placeholderText"><string>e.g. DS Study Group</string></property></widget></item>
+               <item row="1" column="0"><widget class="QLabel"><property name="text"><string>Course Name</string></property></widget></item>
+               <item row="1" column="1"><widget class="QLineEdit" name="txtCourseName"><property name="placeholderText"><string>e.g. Data Structures</string></property></widget></item>
+               <item row="2" column="0"><widget class="QLabel"><property name="text"><string>Course Code</string></property></widget></item>
+               <item row="2" column="1"><widget class="QLineEdit" name="txtCourseCode"><property name="placeholderText"><string>e.g. CSE225</string></property></widget></item>
+               <item row="3" column="0"><widget class="QLabel"><property name="text"><string>Description</string></property></widget></item>
+               <item row="3" column="1"><widget class="QLineEdit" name="txtGroupDesc"><property name="placeholderText"><string>Short description</string></property></widget></item>
+               <item row="4" column="0"><widget class="QLabel"><property name="text"><string>Max Members</string></property></widget></item>
+               <item row="4" column="1"><widget class="QSpinBox" name="spnMaxMembers"><property name="minimum"><number>2</number></property><property name="maximum"><number>50</number></property><property name="value"><number>10</number></property></widget></item>
+               <item row="5" column="0"><widget class="QLabel"><property name="text"><string>Privacy</string></property></widget></item>
+               <item row="5" column="1"><widget class="QComboBox" name="cmbPrivacy"><item><property name="text"><string>Public</string></property></item><item><property name="text"><string>Private</string></property></item></widget></item>
+              </layout>
+             </widget>
+            </item>
+            <item><widget class="QPushButton" name="btnCreateGroup"><property name="text"><string>➕ Create Group</string></property></widget></item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QLineEdit" name="txtJoinGroupId"><property name="placeholderText"><string>Group ID to join</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnJoinGroup"><property name="text"><string>🔗 Join</string></property></widget></item>
+              <item><widget class="QLineEdit" name="txtLeaveGroupId"><property name="placeholderText"><string>Group ID to leave</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnLeaveGroup"><property name="text"><string>🚪 Leave</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnViewMyGroups"><property name="text"><string>My Groups</string></property></widget></item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QLineEdit" name="txtSearchGroup"><property name="placeholderText"><string>Search groups by name or course</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnSearchGroups"><property name="text"><string>🔍 Search</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnViewPublicGroups"><property name="text"><string>Public Groups</string></property></widget></item>
+             </layout>
+            </item>
+            <item><widget class="QListWidget" name="listMyGroups"/></item>
+            <item><widget class="QListWidget" name="listGroupSearch"/></item>
+           </layout>
+          </widget>
+
+          <!-- Manage Group -->
+          <widget class="QWidget" name="tabManageGroup"><attribute name="title"><string>⚙ Manage Group</string></attribute>
+           <layout class="QVBoxLayout"><property name="margin"><number>10</number></property>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QLabel"><property name="text"><string>Group ID:</string></property></widget></item>
+              <item><widget class="QLineEdit" name="txtManageGroupId"><property name="placeholderText"><string>Your group ID</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnCloseGroup"><property name="text"><string>🔒 Close Group</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnViewMembers"><property name="text"><string>👥 View Members</string></property></widget></item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QLabel"><property name="text"><string>Promote Student ID:</string></property></widget></item>
+              <item><widget class="QLineEdit" name="txtPromoteMemberId"><property name="placeholderText"><string>Student ID</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnPromoteMember"><property name="text"><string>⭐ Promote to Leader</string></property></widget></item>
+             </layout>
+            </item>
+            <item><widget class="QListWidget" name="listMembers"/></item>
+           </layout>
+          </widget>
+
+          <!-- Events -->
+          <widget class="QWidget" name="tabStudentEvents"><attribute name="title"><string>📅 Events</string></attribute>
+           <layout class="QVBoxLayout"><property name="margin"><number>10</number></property>
+            <item>
+             <widget class="QGroupBox"><property name="title"><string>Request Event (CGPA &gt; 3.5 required | Max 3 per group)</string></property>
+              <layout class="QGridLayout">
+               <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Group ID</string></property></widget></item>
+               <item row="0" column="1"><widget class="QLineEdit" name="txtEventGroupId"><property name="placeholderText"><string>Your group ID</string></property></widget></item>
+               <item row="1" column="0"><widget class="QLabel"><property name="text"><string>Title</string></property></widget></item>
+               <item row="1" column="1"><widget class="QLineEdit" name="txtEventTitle"><property name="placeholderText"><string>Event title</string></property></widget></item>
+               <item row="2" column="0"><widget class="QLabel"><property name="text"><string>Date</string></property></widget></item>
+               <item row="2" column="1"><widget class="QLineEdit" name="txtEventDate"><property name="placeholderText"><string>yyyy-MM-dd</string></property></widget></item>
+               <item row="3" column="0"><widget class="QLabel"><property name="text"><string>Time</string></property></widget></item>
+               <item row="3" column="1"><widget class="QLineEdit" name="txtEventTime"><property name="placeholderText"><string>HH:mm</string></property></widget></item>
+               <item row="4" column="0"><widget class="QLabel"><property name="text"><string>Venue</string></property></widget></item>
+               <item row="4" column="1"><widget class="QLineEdit" name="txtEventVenue"><property name="placeholderText"><string>Room / Online link</string></property></widget></item>
+               <item row="5" column="0"><widget class="QLabel"><property name="text"><string>Description</string></property></widget></item>
+               <item row="5" column="1"><widget class="QLineEdit" name="txtEventDesc"><property name="placeholderText"><string>Brief description</string></property></widget></item>
+               <item row="6" column="0"><widget class="QLabel"><property name="text"><string>Priority</string></property></widget></item>
+               <item row="6" column="1"><widget class="QComboBox" name="cmbEventPriority"><item><property name="text"><string>High</string></property></item><item><property name="text"><string>Medium</string></property></item><item><property name="text"><string>Low</string></property></item></widget></item>
+              </layout>
+             </widget>
+            </item>
+            <item><widget class="QPushButton" name="btnRequestEvent"><property name="text"><string>📨 Submit Event Request</string></property></widget></item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QLabel"><property name="text"><string>Event ID to join:</string></property></widget></item>
+              <item><widget class="QLineEdit" name="txtJoinEventId"><property name="placeholderText"><string>Event ID</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnJoinEvent"><property name="text"><string>🙋 Join Event</string></property></widget></item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QLineEdit" name="txtViewEventGroupId"><property name="placeholderText"><string>Group ID to view events</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnViewGroupEvents"><property name="text"><string>Group Events</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnViewUpcomingEvents"><property name="text"><string>All Upcoming</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnViewReminders"><property name="text"><string>🔔 Reminders</string></property></widget></item>
+             </layout>
+            </item>
+            <item><widget class="QListWidget" name="listEvents"/></item>
+           </layout>
+          </widget>
+
+          <!-- Tasks -->
+          <widget class="QWidget" name="tabStudentTasks"><attribute name="title"><string>📋 Tasks</string></attribute>
+           <layout class="QVBoxLayout"><property name="margin"><number>10</number></property>
+            <item>
+             <widget class="QGroupBox"><property name="title"><string>Create Task</string></property>
+              <layout class="QGridLayout">
+               <item row="0" column="0"><widget class="QLabel"><property name="text"><string>Group ID</string></property></widget></item>
+               <item row="0" column="1"><widget class="QLineEdit" name="txtTaskGroupId"><property name="placeholderText"><string>Group ID</string></property></widget></item>
+               <item row="1" column="0"><widget class="QLabel"><property name="text"><string>Title</string></property></widget></item>
+               <item row="1" column="1"><widget class="QLineEdit" name="txtTaskTitle"><property name="placeholderText"><string>Task title</string></property></widget></item>
+               <item row="2" column="0"><widget class="QLabel"><property name="text"><string>Deadline</string></property></widget></item>
+               <item row="2" column="1"><widget class="QLineEdit" name="txtTaskDeadline"><property name="placeholderText"><string>yyyy-MM-dd</string></property></widget></item>
+               <item row="3" column="0"><widget class="QLabel"><property name="text"><string>Assign to (Student ID)</string></property></widget></item>
+               <item row="3" column="1"><widget class="QLineEdit" name="txtTaskMemberId"><property name="placeholderText"><string>Student ID</string></property></widget></item>
+               <item row="4" column="0"><widget class="QLabel"><property name="text"><string>Notes</string></property></widget></item>
+               <item row="4" column="1"><widget class="QLineEdit" name="txtTaskNotes"><property name="placeholderText"><string>Optional notes</string></property></widget></item>
+              </layout>
+             </widget>
+            </item>
+            <item><widget class="QPushButton" name="btnCreateTask"><property name="text"><string>➕ Create Task</string></property></widget></item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QLabel"><property name="text"><string>Task ID:</string></property></widget></item>
+              <item><widget class="QLineEdit" name="txtTaskId"><property name="placeholderText"><string>Task ID</string></property></widget></item>
+              <item><widget class="QLabel"><property name="text"><string>Progress %:</string></property></widget></item>
+              <item><widget class="QSpinBox" name="spnProgress"><property name="maximum"><number>100</number></property></widget></item>
+              <item><widget class="QPushButton" name="btnUpdateProgress"><property name="text"><string>Update</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnMarkTaskDone"><property name="text"><string>✅ Done</string></property></widget></item>
+             </layout>
+            </item>
+            <item>
+             <layout class="QHBoxLayout">
+              <item><widget class="QLineEdit" name="txtViewTaskGroupId"><property name="placeholderText"><string>Group ID for tasks</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnViewGroupTasks"><property name="text"><string>Group Tasks</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnViewMyTasks"><property name="text"><string>My Tasks</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnViewPendingTasks"><property name="text"><string>Pending</string></property></widget></item>
+              <item><widget class="QPushButton" name="btnSortTasksByDeadline"><property name="text"><string>Sort Deadline</string></property></widget></item>
+             </layout>
+            </item>
+            <item><widget class="QListWidget" name="listTasks"/></item>
+           </layout>
+          </widget>
+
+         </widget>
+        </item>
+       </layout>
+      </widget>
+
+     </widget>
+    </item>
+   </layout>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
